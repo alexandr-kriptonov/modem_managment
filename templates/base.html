@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+        {% if title %}
+        <title>{{title}} - MODEM MANGMENT</title>
+        {% else %}
+        <title>MODEM MANGMENT</title>
+        {% endif %}
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery/jquery-2.1.1.min.js') }}" /></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}" /></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}" /></script>
+        <script type=text/javascript>
+          $BASE_URL = '/' + '{{ base_url }}' + '/';
+        </script>
+    </head>
+    <body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="MODEM MANAGMENT" src="...">
+                </a>
+                <select class="form-control" id="name_acc">
+                {% for name_acc in name_accounts %}
+                    <option value="{{ name_acc }}" class="acc_item">{{ name_acc }}</option>
+                {% endfor %}
+                </select>
+            </div>
+        </div>
+    </nav>
+        {% block content %}{% endblock %}
+    </body>
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img alt="FOOTER" src="...">
+            </div>
+        </div>
+    </nav>
+</html>

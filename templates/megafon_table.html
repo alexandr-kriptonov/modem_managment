@@ -1,0 +1,18 @@
+{% if info %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>OPTION</th>
+            <th>{{ info['number'] }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name_value in used_options %}
+        <tr>
+            <td>{{ name_value }}</td>
+            <td>{{ info[name_value] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
