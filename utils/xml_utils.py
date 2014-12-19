@@ -15,9 +15,9 @@ XPATH_IDS = {
     'update_datetime': 'DATE',
     'packs': 'GET_PACKS_AND_DISCOUNTS_INFO',
     'pack': 'PACK',
-    'pack_name': 'DISCOUNT/PLAN_NAME',
-    'activate_date': 'DISCOUNT/ACTIVATE_DATE',
-    'close_date': 'DISCOUNT/CLOSE_DATE',
+    'pack_name': 'PACK_NAME',
+    'activate_date': 'ACTIVATE_DATE',
+    'close_date': 'CLOSE_DATE',
     'volume_total': 'DISCOUNT/VOLUME_TOTAL',
     'volume_availaible': 'DISCOUNT/VOLUME_AVAILABLE',
 }
